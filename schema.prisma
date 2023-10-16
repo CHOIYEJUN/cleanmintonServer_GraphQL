@@ -1,0 +1,16 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "./generated/client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgres://postgres:postgres@54.180.83.43:5432/O2Calendar?schema=public"
+}
+
+model user {
+  seq       Int  @id @default(autoincrement())
+  name     String
+  userId    String
+  password String
+}
